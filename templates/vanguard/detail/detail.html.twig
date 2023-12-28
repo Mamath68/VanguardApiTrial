@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{card.name}}
+{% endblock %}
+
+
+{% block body %}
+	<h1>
+		{{card.name}}
+	</h1>
+	<hr>
+
+
+	<div class="conteneur">
+		<div class="col-2 col-md-6">
+			{% if card.imageurlen %}
+				<img class="carte_detail" src={{card.imageurlen}} alt={{card.name}}>
+			{% else %}
+				<img class="carte_detail" src="{{card.imageurljp}}" alt="{{card.name}}">
+			{% endif %}
+		</div>
+		<div class="col-2 col-md-6">
+			<ul class="text-center card-data-info">
+				{% if card.grade is defined %}
+					<li>
+						<span class="text-info">Grade</span>
+						<span>
+							<a class="link-light" href={{path('detail_grade',{'grade': card.grade} )}} target="_blank">
+								{{card.grade}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.cardtype %}
+					<li>
+						<span class="text-info">CardType</span>
+						<span>
+							<a class="link-light" href={{path('detail_cardtype',{'cardtype': card.cardtype} )}} target="_blank">
+								{{card.cardtype}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.triggereffect %}
+					<li>
+						<span class="text-info">Trigger Effect</span>
+						<span>
+							<a class="link-light">
+								{{card.triggereffect}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.format %}
+					<li>
+						<span class="text-info">Format</span>
+						<span>
+							<a class="link-light" target="_blank">
+								{{card.format}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.race %}
+					<li>
+						<span class="text-info">Race</span>
+						<span>
+							<a class="link-light" href={{path('detail_race',{'race': card.race} )}} target="_blank">
+								{{card.race}}
+							</a>
+						</li>
+					</li>
+				{% endif %}
+				{% if card.nation %}
+					<li>
+						<span class="text-info">Nation</span>
+						<span>
+							<a class="link-light" href={{path('detail_nation',{'nation': card.nation} )}} target="_blank">
+								{{card.nation}}
+							</a>
+						</span>
+
+					</li>
+				{% endif %}
+				{% if card.clan %}
+					<li>
+						<span class="text-info">Clan</span>
+						<span>
+							<a class="link-light" href={{path('detail_clan',{'clan': card.clan} )}} target="_blank">
+								{{card.clan}}
+							</a>
+						</span>
+					</li>
+				{% else %}
+					<li>
+						<span class="text-info">Clan</span>
+						<span>
+							<p>No Clan</p>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.skill %}
+					<li>
+						<span class="text-info">Skill</span>
+						<span>
+							<a class="link-light">
+								{{card.skill}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.critical %}
+					<li>
+						<span class="text-info">Critical</span>
+						<span>
+							<a class="link-light">
+								{{card.critical}}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.power %}
+					<li>
+						<span class="text-info">Power</span>
+						<span>
+							<a class="link-light" href={{path('detail_power',{'power': card.power} )}} target="_blank">
+								{{ card.power }}
+							</a>
+						</span>
+					</li>
+				{% endif %}
+				{% if card.shield is defined %}
+					<li>
+						<span class="text-info">Shield</span>
+						<span>
+							<a class="link-light" href={{path('detail_shield', {'shield': card.shield} )}} target="_blank">
+								{{card.shield}}
+							</a>
+
+						</span>
+					</li>
+				{% endif %}
+			</ul>
+			<div class="text-center mt-3">
+				{% if card.flavor %}
+					<h4>Flavor</h4>
+					<p class="mt-3">
+						{{card.flavor}}
+					</p>
+				{% endif %}
+				{% if card.effect %}
+					<h4>Effect</h4>
+					<p>
+						{{card.effect}}
+					</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

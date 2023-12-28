@@ -1,0 +1,343 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Cardfight!! Vanguard
+{% endblock %}
+
+{% block body %}
+	{# United Sanctuary #}
+	<div class="grid-cols-6 text-center united">
+		{% for card in royal.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in oracle.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in angel.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in shadow.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in gold.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in genesis.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Dragon Empire #}
+	<div class="grid-cols-6 text-center dragon">
+		{% for card in kagero.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in nubatama.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in tachikaze.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in murakumo.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in narukami.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Star Gate #}
+	<div class="grid-cols-6 text-center stargate">
+		{% for card in nova.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in dimension.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in link.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Dark Zone #}
+	<div class="grid-cols-6 text-center darkzone">
+		{% for card in spike.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in dark.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in pale.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in gear.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Magallanica #}
+	<div class="grid-cols-6 text-center magallanica text-light">
+		{% for card in granblue.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a class="link-light" href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in bermuda.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a class="link-light" href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in aqua.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a class="link-light" href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+
+	{# Zoo #}
+	<div class="grid-cols-6 text-center zoo">
+		{% for card in megacolony.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in great.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+		{% for card in neo.data %}
+			<div class="border border-2 border-light ">
+				<h6>{{card.clan}}</h6>
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

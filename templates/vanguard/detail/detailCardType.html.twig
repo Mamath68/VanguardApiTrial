@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{cardtype.data[0].cardtype}}
+{% endblock %}
+
+
+{% block body %}
+	{# United Sanctuary #}
+	<h5>{{cardtype.data[0].cardtype}}</h5>
+	<div class="grid-cols-6 text-center united">
+		{% for card in cardtype.data %}
+			<div class="border border-2 border-light ">
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{clan.data[0].clan}}
+{% endblock %}
+
+{% block body %}
+	{# United Sanctuary #}
+	<h5>{{clan.data[0].clan}}</h5>
+	<div class="grid-cols-6 text-center united">
+		{% for card in clan.data %}
+			<div class="border border-2 border-light ">
+				{% if card.imageurlen %}
+					<img class="cartes pt-3" src="{{card.imageurlen}}" alt="{{card.name}}">
+				{% else %}
+					<img class="cartes pt-3" src="{{card.imageurljp}}" alt="{{card.name}}">
+				{% endif %}
+				<h5 class="mt-4">
+					<a href={{path('detail_card',{'id': card.id} )}}>{{card.name}}</a>
+				</h5>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

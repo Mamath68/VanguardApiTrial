@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-            {{ ux_controller_link_tags() }}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="icon" href="https://p1.hiclipart.com/preview/121/520/35/anime-spring-2018-icon-folder-icon-cardfight-vanguard-2018-png-clipart-thumbnail.jpg">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://kit.fontawesome.com/f0dc5fab26.js" crossorigin="anonymous"></script>
 
-        {% block javascripts %}
-{% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block stylesheets %}
+			{{ ux_controller_link_tags() }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg bg-secondary">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="{{path('app_home')}}">Cardfight!! Vanguard!</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="offcanvas bg-secondary offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Cardfight!! Vanguard!</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+								<li class="nav-item">
+									<a class="nav-link link-light" href="{{path('app_home')}}">Accueil</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link link-light" href="{{path('vanguard_cards')}}">Jeu de cartes</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle link-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										L'univers Vanguard
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">L'anime</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Le mangas</a>
+										</li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Produits dérivés</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			{% block body %}{% endblock %}
+		</main>
+	</body>
 </html>
